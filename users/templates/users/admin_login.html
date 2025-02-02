@@ -1,0 +1,19 @@
+{% extends "admin/admin_auth.html" %}
+
+{% block title %}
+    Admin Login
+{% endblock title %}
+
+{% block content %}
+    <h3>Admin</h3>
+    <h1>LOGIN</h1>
+    <hr>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" id="username" placeholder="Username:" required><br>
+        <input type="email" name="email" id="email" placeholder="Email:" required><br>
+        <input type="password" name="password" id="password" placeholder="Password:" required><br>
+        <a href="#" class="forgot">Forgot password?</a><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+{% endblock content %}

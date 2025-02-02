@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+            Default Title
+        {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>End User Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="/end_user/home">Home</a></li>
+                    <li><a href="/end_user/view-budget">View Budget</a></li>
+                    <li><a href="/end_user/purchase-request">Purchase Requests</a></li>
+                    <li><a href="/end_user/settings">Settings</a></li>
+                    <li><a href="/">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        {% block main-content %}{% endblock main-content %}
+    </div>
+</body>
+</html>

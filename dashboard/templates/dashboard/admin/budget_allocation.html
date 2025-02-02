@@ -1,0 +1,70 @@
+{% extends "admin/dashboard.html" %}
+
+{% block title %}Budget Allocation{% endblock %}
+
+{% block main-content %}
+<main class="content">
+    <header class="dashboard-header">
+        <h1>Budget Allocation</h1>
+        <p>Manage and allocate budgets to different departments.</p>
+    </header>
+
+    <!-- Budget Allocation Form -->
+    <section class="budget-form">
+        <header>
+            <h2>Allocate Budget</h2>
+            <p>Assign funds to various departments.</p>
+        </header>
+        <form action="#" method="post">
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="instruction">Instruction</option>
+                <option value="research_ext">Research &amp; Extension</option>
+                <option value="sports">Sports</option>
+            </select>
+
+            <label for="amount">Budget Amount (PHP):</label>
+            <input type="number" id="amount" name="amount" min="0" required>
+
+            <button type="submit" class="allocate-btn">Allocate</button>
+        </form>
+    </section>
+
+    <!-- Budget Allocation Summary -->
+    <section class="budget-summary">
+        <header>
+            <h2>Current Budget Allocations</h2>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Total Allocated</th>
+                    <th>Spent</th>
+                    <th>Remaining</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Instruction</td>
+                    <td>P100,000</td>
+                    <td>P40,000</td>
+                    <td>P60,000</td>
+                </tr>
+                <tr>
+                    <td>Research &amp; Extension</td>
+                    <td>P50,000</td>
+                    <td>P20,000</td>
+                    <td>P30,000</td>
+                </tr>
+                <tr>
+                    <td>Sports</td>
+                    <td>P80,000</td>
+                    <td>P50,000</td>
+                    <td>P30,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}
