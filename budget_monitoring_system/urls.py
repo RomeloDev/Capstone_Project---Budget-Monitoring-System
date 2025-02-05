@@ -19,7 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # I comment this to view my admin page I made
-    #path('admin/', admin.site.urls), 
+    path('admin/', admin.site.urls), 
     path('', include('users.urls')),
     path('', include('dashboard.urls'))
 ]
